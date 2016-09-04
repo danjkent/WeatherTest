@@ -1,0 +1,51 @@
+﻿@using WeatherTest.WebUI.Models
+@model HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">Weather Data</div>
+            <div class="panel-body">
+                <form asp-controller="Home" asp-action="Index" id="searchForm" data-ajax="false" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#resultsContainer">
+                    <p>
+                        <label>Location</label>
+                        <input asp-for="Location" class="form-control" />
+                        <span asp-validation-for="Location"></span>
+
+                    </p>
+                    <p>
+                        <label>Temperature Units</label>
+                        <a id="manageTemperatureUoms" class="manage-uom-options">Manage Options</a>
+                        <select asp-for="SelectedTemperatureUnits" asp-items="Model.TemperatureUnits" class="form-control"></select>
+
+                    </p>
+                    <p>
+                        <label>Wind Speed Units</label>
+                        <a id="manageWindSpeedUoms" class="manage-uom-options">Manage Options</a>
+                        <select asp-for="SelectedWindSpeedUnits" asp-items="Model.WindSpeedUnits" class="form-control"></select>
+                    </p>
+                    <p class="text-center">
+                        <button type="submit" class="btn btn-success">Get Weather</button>
+                    </p>
+                    <a id="manageServices" class="manage-uom-options">Manage Sources</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+@if (Model.Results != null)
+{
+    <div id="resultsContainer" class="text-center">@Model.Results.ToString()</div>
+}
+@Html.Partial("CRUDDialog")
+
+
+
+@section scripts
+{
+    <script src="~/js/home.index.js"></script>
+}

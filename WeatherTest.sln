@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4A963714-E666-4A4C-B62B-5742F2BB6567}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DF062A4D-92EB-4F54-BB80-B0E0BD948E67}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WeatherTest.WebUI", "src\WeatherTest.WebUI\WeatherTest.WebUI.xproj", "{E5E5B15C-05E0-4621-89BD-0052F54260C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{9EC5D9D1-BE1D-4833-A72B-552456C68CA3}"
+	ProjectSection(SolutionItems) = preProject
+		Database\WeatherTest.ldf = Database\WeatherTest.ldf
+		Database\WeatherTest.mdf = Database\WeatherTest.mdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0A352111-4881-4390-BFA5-289BF757E938}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WeatherTest.WebUI.Test", "test\WeatherTest.WebUI.Test\WeatherTest.WebUI.Test.xproj", "{2FC78029-61D1-4BDC-AE24-8972B708E9D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5E5B15C-05E0-4621-89BD-0052F54260C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5E5B15C-05E0-4621-89BD-0052F54260C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5E5B15C-05E0-4621-89BD-0052F54260C2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E5E5B15C-05E0-4621-89BD-0052F54260C2}.Debug|x64.Build.0 = Debug|Any CPU
+		{E5E5B15C-05E0-4621-89BD-0052F54260C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5E5B15C-05E0-4621-89BD-0052F54260C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5E5B15C-05E0-4621-89BD-0052F54260C2}.Release|x64.ActiveCfg = Release|Any CPU
+		{E5E5B15C-05E0-4621-89BD-0052F54260C2}.Release|x64.Build.0 = Release|Any CPU
+		{2FC78029-61D1-4BDC-AE24-8972B708E9D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FC78029-61D1-4BDC-AE24-8972B708E9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FC78029-61D1-4BDC-AE24-8972B708E9D0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2FC78029-61D1-4BDC-AE24-8972B708E9D0}.Debug|x64.Build.0 = Debug|Any CPU
+		{2FC78029-61D1-4BDC-AE24-8972B708E9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FC78029-61D1-4BDC-AE24-8972B708E9D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FC78029-61D1-4BDC-AE24-8972B708E9D0}.Release|x64.ActiveCfg = Release|Any CPU
+		{2FC78029-61D1-4BDC-AE24-8972B708E9D0}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5E5B15C-05E0-4621-89BD-0052F54260C2} = {DF062A4D-92EB-4F54-BB80-B0E0BD948E67}
+		{2FC78029-61D1-4BDC-AE24-8972B708E9D0} = {0A352111-4881-4390-BFA5-289BF757E938}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,64 @@
+﻿<form asp-controller="Home" asp-action="CreateData" data-ajax="false" data-ajax-method="GET">
+    <div class="modal fade" id="crudDialog" tabindex="-1" role="dialog" aria-labelledby="crudDialogLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="crudDialogLabel">Create Data</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        In a real solution an authorised user would be taken to maintenance pages to allow them to add/remove
+                        additional units of measure and services.
+                    </p>
+                    <p>
+                        For the purposes of this test the <b>Create Data</b> button below will create the following records
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <dl>
+                                <dt>TemperatureUOM</dt>
+                                <dd>Kelvin</dd>
+                            </dl>
+                            <dl>
+                                <dt>TemperatureConversion</dt>
+                                <dd>Kelvin→Celsius ({value}-273.15)</dd>
+                                <dd>Kelvin→Fahrenheit ({value}*(9/5)-459.67)</dd>
+                                <dd>Celsius→Kelvin ({value}+273.15)</dd>
+                                <dd>Fahrenheit→Kelvin (({value} + 459.67)*(5/9))</dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6">
+                            <dl>
+                                <dt>WindSpeedUOM</dt>
+                                <dd>ft/s</dd>
+                            </dl>
+                            <dl>
+                                <dt>WindSpeedConversion</dt>
+                                <dd>Feet/Second→KPH ({value}*1.097)</dd>
+                                <dd>Feet/Second→MPH ({value}*0.682)</dd>
+                                <dd>KPH→Feet/Second ({value}/1.097)</dd>
+                                <dd>MPH→Feet/Second ({value}/0.682)</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <p>
+                        <dl>
+                            <dt>WeatherService</dt>
+                            <dd>Title: Yahoo</dd>
+                            <dd>TemperatureUom: Fahrenheit</dd>
+                            <dd>TemperaturePath: query.results.channel.item.condition.temp</dd>
+                            <dd>WindSpeedUom: MPH</dd>
+                            <dd>WindSpeedPath: query.results.channel.wind.speed</dd>
+                            <dd title="https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22{location}%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys">ServiceAddress: <a>https://query.yahooapis.com/v1/public/yql?q=...{location}...</a></dd>
+                        </dl>
+                    </p>                   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success">Create Data</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
