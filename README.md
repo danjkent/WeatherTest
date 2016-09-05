@@ -11,8 +11,8 @@ Your application/website should:
 5. Gracefully handle one or more of the APIs being down or slow to respond
 
 It should pass the following tests:
-6.	Given temperatures of 10c from bbc and 68f from accuweather when searching then display either 15c or 59f depending on what the user has chosen
-7.	Given wind speeds of 8kph from bbc and 10mph from accuweather when searching then display either 12kph or 7.5mph depending on what the user has chosen
+6.	Given temperatures of 10c from bbc and 68f from accuweather when searching then display either 15c or 59f depending on what the user has chosen.
+7.	Given wind speeds of 8kph from bbc and 10mph from accuweather when searching then display either 12kph or 7.5mph depending on what the user has chosen.
 
 ### Implementation Notes
 1. Results are queried and then the average is taken and reported back to the user.
